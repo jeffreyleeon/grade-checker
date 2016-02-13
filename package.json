@@ -6,6 +6,7 @@
   "dependencies": {
     "eslint": "^2.0.0",
     "express": "^4.13.4",
+    "jQuery": "^1.7.4",
     "jsdom": "^8.0.2"
   },
   "devDependencies": {
