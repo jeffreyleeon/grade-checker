@@ -1,16 +1,15 @@
 var express = require('express');
 var app = express();
-const DomParser = require('./parser/DomParser');
+const CASSystem = require('./CASSystem');
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
 app.get('/grades', function(req, res) {
-  const loginToken = DomParser.getLoginToken((token) => {
-    console.log('======token ', token);
-  });
-  res.send('=test');
+  var grades = 'no';
+  CASSystem.getGrades();
+  res.send(grades);
 });
 
 app.listen(3000, function () {
